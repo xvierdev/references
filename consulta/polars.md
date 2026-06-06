@@ -437,6 +437,16 @@ df = df.with_columns(
 
 ---
 
+## ✅ Checklist de Polars
+- [ ] Usou `LazyFrame` (`scan_*`) para processamento de grandes volumes?
+- [ ] Evitou o uso de `.apply()` e preferiu expressões nativas (`pl.col`)?
+- [ ] Validou os tipos de dados com `.schema` após transformações?
+- [ ] Utilizou `.collect()` apenas no final do pipeline lazy?
+- [ ] Tratou valores nulos explicitamente com `fill_null` ou `drop_nulls`?
+- [ ] Aproveitou o paralelismo nativo ao evitar loops Python sobre DataFrames?
+
+---
+
 ## 📚 Referências Rápidas
 - `pl.DataFrame`, `pl.Series`
 - `pl.col`, `pl.lit`, `pl.when`

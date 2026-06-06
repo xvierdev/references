@@ -603,6 +603,21 @@ from ..outro_pacote import func_b
 
 ---
 
+## ✅ Checklist de Padrões Python
+
+- [ ] Uso de `__init__` para inicialização e `__repr__` para debug.
+- [ ] Implementação de `@property` para encapsulamento de atributos.
+- [ ] Uso de herança apenas para relações "é um", preferindo composição para outros casos.
+- [ ] Uso de `ABC` ou `Protocol` para definir contratos claros.
+- [ ] Substituição de classes de dados simples por `@dataclass`.
+- [ ] Uso de `Enum` para estados fixos e constantes relacionadas.
+- [ ] Aplicação de `__slots__` em classes com milhões de instâncias para economizar memória.
+- [ ] Uso de `super()` corretamente em cadeias de herança.
+- [ ] Separação de lógica de criação usando o padrão Factory se necessário.
+- [ ] Garantia de que métodos especiais (`__eq__`, `__hash__`) estão consistentes.
+
+---
+
 ## 📝 Resumo rápido
 
 - `class` define tipos compostos.

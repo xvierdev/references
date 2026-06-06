@@ -224,3 +224,14 @@ Aqui está uma nota de rodapé.[^1]
 - Autolinks como `<https://example.com>` funcionam no GitHub e em CommonMark.
 - Nem todos os renderizadores suportam todas as extensões do Markdown. Verifique o ambiente (GitHub, GitLab, MkDocs, Jekyll, etc.).
 - Quando precisar de recursos avançados específicos, prefira documentar o sabor/ambiente usado no projeto.
+
+---
+
+## ✅ Checklist de Markdown
+- [ ] Usou títulos (`#`) de forma hierárquica e consistente?
+- [ ] Validou a renderização de links e imagens?
+- [ ] Blocos de código possuem a indicação da linguagem para syntax highlighting?
+- [ ] Tabelas estão com alinhamento configurado se necessário?
+- [ ] Listas de tarefas (`- [ ]`) estão sendo usadas para itens acionáveis?
+- [ ] Caracteres especiais que devem aparecer literalmente foram escapados com `\`?
+- [ ] O arquivo termina com uma linha em branco para melhor compatibilidade?

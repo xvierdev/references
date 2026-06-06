@@ -306,6 +306,21 @@ Evite quando:
 
 ---
 
+## ✅ Checklist de WebSockets
+
+- [ ] Uso de `wss://` em todos os ambientes de produção.
+- [ ] Implementação de Heartbeats (Ping/Pong) para manter a conexão ativa.
+- [ ] Gerenciamento centralizado de conexões (`ConnectionManager`) para broadcasting.
+- [ ] Tratamento explícito de `WebSocketDisconnect` para limpeza de recursos.
+- [ ] Validação de tokens de autenticação durante o handshake inicial.
+- [ ] Uso de subprotocols para negociação de versão/formato de mensagens.
+- [ ] Configuração de timeouts e limites de tamanho de mensagem no servidor.
+- [ ] Implementação de Redis Pub/Sub para escalabilidade horizontal (múltiplas instâncias).
+- [ ] Configuração correta de Headers de Upgrade no proxy reverso (Nginx/Traefik).
+- [ ] Validação de JSON e tratamento de mensagens malformadas para evitar crashes.
+
+---
+
 ## 💡 Dicas de Ouro
 - Use `wss://` em produção.
 - Mantenha o payload pequeno e simples.

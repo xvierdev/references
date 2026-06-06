@@ -136,3 +136,13 @@ G_carregado = nx.read_gml("grafo.gml")
 ## 💡 Dicas de Performance
 - Para redes muito grandes (milhões de nós), o `NetworkX` pode ser lento pois é escrito puramente em Python. Nesses casos, considere usar **`graph-tool`** ou **`igraph`** (que possuem core em C++).
 - Use `nx.info(G)` para um resumo rápido das estatísticas do seu grafo.
+
+---
+
+## ✅ Checklist de NetworkX
+- [ ] Escolheu o tipo de grafo correto (`Graph`, `DiGraph`, `MultiGraph`)?
+- [ ] Atributos de peso (`weight`) foram adicionados para algoritmos de caminho?
+- [ ] Verificou a conectividade do grafo antes de executar algoritmos globais?
+- [ ] Usou nomes de nós descritivos ou IDs consistentes?
+- [ ] Considerou o uso de `igraph` ou `graph-tool` para redes de larga escala?
+- [ ] Exportou os dados em formatos padrão (`JSON`, `GML`) para interoperabilidade?

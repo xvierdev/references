@@ -13,6 +13,7 @@ O módulo `contextlib` fornece utilitários para trabalhar com a instrução `wi
 6. [⚡ asynccontextmanager](#-asynccontextmanager)
 7. [🧱 nullcontext](#-nullcontext)
 8. [💡 Dicas e Boas Práticas](#-dicas-e-boas-práticas)
+9. [✅ Checklist](#-checklist-de-contextlib)
 
 ---
 
@@ -151,3 +152,14 @@ with ctx as recurso:
         print("Isso não vai para o terminal")
     ```
 4.  **NullContext**: Use `nullcontext()` quando precisar de um context manager opcional que não faz nada.
+
+---
+
+## ✅ Checklist de contextlib
+- [ ] Implementou `__enter__` e `__exit__` para classes personalizadas?
+- [ ] Usou `@contextmanager` para simplificar geradores simples?
+- [ ] Garantiu a limpeza com `try...finally` dentro de geradores?
+- [ ] Usou `ExitStack` para gerenciar múltiplos contextos dinâmicos?
+- [ ] Usou `suppress` para ignorar erros esperados e não críticos?
+- [ ] Utilizou `closing` para objetos que possuem apenas o método `.close()`?
+- [ ] Validou o uso de `asynccontextmanager` em ambientes assíncronos?

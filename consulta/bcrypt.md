@@ -172,5 +172,20 @@ Para novos projetos, considere também `argon2` como alternativa moderna e recom
 
 ---
 
+## ✅ Checklist de bcrypt
+
+- [ ] Instalação via `pip install bcrypt`.
+- [ ] Uso de `bcrypt.gensalt(rounds=12)` para gerar salts com custo adequado.
+- [ ] Uso de `bcrypt.hashpw()` para gerar o hash da senha (em bytes).
+- [ ] Uso de `bcrypt.checkpw()` para verificar a senha durante o login.
+- [ ] Garantia de que a senha plana foi codificada para `utf-8` antes de processar.
+- [ ] Tratamento do limite de 72 bytes (truncamento) se necessário.
+- [ ] Aplicação de normalização Unicode (`NFC`) para consistência.
+- [ ] Implementação de lógica de rehash automático se o custo do hash armazenado for antigo/baixo.
+- [ ] Armazenamento apenas do hash final (o salt já está embutido).
+- [ ] Uso de TLS/HTTPS em todas as rotas que trafegam senhas.
+
+---
+
 ## 🧠 Observações finais
 O `bcrypt` é uma excelente escolha para hashing de senhas, mas não é a única ferramenta. Um guia completo deve incluir custo, truncamento, normalização, rehash e o contexto correto de uso.

@@ -12,6 +12,8 @@ Docstrings são strings literais que aparecem logo após a definição de um mó
 5. [🧾 Tipos de docstrings](#-tipos-de-docstrings)
 6. [💡 Melhores Práticas](#-melhores-práticas)
 7. [🛠️ Ferramentas e automação](#-ferramentas-e-automações)
+8. [🚀 Avançado e Produção](#-avançado-e-produção)
+9. [✅ Checklist](#-checklist-de-docstrings)
 
 ---
 
@@ -268,5 +270,42 @@ class Servico:
 - Ferramentas de documentação: **Sphinx**, **MkDocs**, **pdoc**, **pydoc**.
 - Analisadores estáticos: **flake8-docstrings**, **pydocstyle**.
 - Comando útil: `pydocstyle <arquivo>` para validar conformidade com PEP 257.
+
+---
+
+## 🚀 Avançado e Produção
+
+### Integração com CI/CD
+Em ambientes de produção, é recomendável automatizar a verificação de docstrings para manter a qualidade do código.
+
+```bash
+# Executar pydocstyle como parte do pipeline de linting
+pydocstyle src/
+```
+
+### Documentação Dinâmica com Sphinx
+Para projetos grandes, use o Sphinx com a extensão `napoleon` para converter estilos Google e NumPy em documentação HTML profissional.
+
+```python
+# conf.py (Sphinx configuration)
+extensions = [
+    'sphinx.ext.autodoc',
+    'sphinx.ext.napoleon',
+]
+
+napoleon_google_docstring = True
+napoleon_numpy_docstring = True
+```
+
+---
+
+## ✅ Checklist de Docstrings
+- [ ] Todas as funções, classes e módulos públicos possuem docstrings?
+- [ ] O resumo da primeira linha termina com um ponto final?
+- [ ] Existe uma linha em branco entre o resumo e a descrição detalhada?
+- [ ] Os parâmetros (`Args`), retornos (`Returns`) e exceções (`Raises`) estão documentados?
+- [ ] O estilo escolhido (Google, NumPy ou Sphinx) é consistente em todo o projeto?
+- [ ] Type hints estão sendo usados em conjunto com as docstrings?
+- [ ] A documentação foi validada com ferramentas como `pydocstyle`?
 
 > Um bom guia de docstrings deve ser claro, consistente e prático. Este documento já oferece uma base forte e pode ser considerado um manual de referência para escrita de docstrings em Python.

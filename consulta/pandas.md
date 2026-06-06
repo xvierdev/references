@@ -5,20 +5,20 @@ Guia completo e prático para trabalhar com `pandas` em análise de dados, limpe
 ---
 
 ## 📑 Sumário rápido
-1. Início rápido
-2. I/O (CSV, Excel, Parquet, SQL)
-3. Indexação e seleção (`loc`, `iloc`, `at`, `iat`, `query`)
-4. Operações com colunas
-5. Missing data
-6. Reshaping (pivot, melt, stack/unstack, explode)
-7. GroupBy, agregações e janelas móveis
-8. Joins e merges avançados
-9. Tipos de dados e otimização de memória
-10. Time series e resample
-11. Accessors: `.str`, `.dt`, `.cat`
-12. Performance e escala
-13. Boas práticas e armadilhas comuns
-14. Cookbook (receitas práticas)
+1. [Início rápido](#-1-início-rápido)
+2. [I/O (CSV, Excel, Parquet, SQL)](#-2-io)
+3. [Indexação e seleção (`loc`, `iloc`, `at`, `iat`, `query`)](#-3-indexação-e-seleção)
+4. [Operações com colunas](#-4-operações-com-colunas)
+5. [Missing data](#-5-tratamento-de-valores-faltantes)
+6. [Reshaping (pivot, melt, stack/unstack, explode)](#-6-reshaping-pivot-melt-stackunstack-explode)
+7. [GroupBy, agregações e janelas móveis](#-7-groupby-agregações-e-janelas-móveis)
+8. [Joins e merges avançados](#-8-joins-e-merges-avançados)
+9. [Tipos de dados e otimização de memória](#-9-tipos-de-dados-e-otimização-de-memória)
+10. [Time series e resample](#-10-time-series-e-resample)
+11. [Accessors: `.str`, `.dt`, `.cat`](#-11-accessors-úteis)
+12. [Performance e escala](#-12-performance-e-escala)
+13. [Boas práticas e armadilhas comuns](#-13-boas-práticas-e-armadilhas)
+14. [Cookbook (receitas práticas)](#-14-cookbook--receitas-práticas)
 
 ---
 
@@ -321,7 +321,3 @@ tbl = (df.pivot_table(index=["user_id"], columns=["category"], values="value", a
 ## ✅ Recursos adicionais
 - Documentação oficial: https://pandas.pydata.org/
 - Livros e cheatsheets: pandas cheat sheet (O'Reilly / PyData)
-
----
-
-Se quiser, aplico essas alterações no arquivo agora e testo snippets básicos de sintaxe.  

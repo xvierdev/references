@@ -335,6 +335,21 @@ class SuportaSalvar(Protocol):
 
 ---
 
+## ✅ Checklist de Tipos e Coleções
+
+- [ ] Uso do tipo correto para a necessidade (`list` mutável, `tuple` imutável).
+- [ ] Uso de `set` para garantir unicidade e performance em buscas.
+- [ ] Uso de `defaultdict` para evitar erros de chave ausente em agrupamentos.
+- [ ] Uso de `deque` quando houver inserções/remoções frequentes no início da fila.
+- [ ] Uso de `Counter` para contagens rápidas de frequências.
+- [ ] Uso de `NamedTuple` ou `TypedDict` para estruturas de dados com nomes claros.
+- [ ] Aplicação de Type Hints (`List`, `Dict`, `Optional`) em funções e classes.
+- [ ] Uso de `Union` ou o operador `|` (Python 3.10+) para múltiplos tipos possíveis.
+- [ ] Verificação de tipos em runtime com `pydantic` se os dados vierem de fontes externas.
+- [ ] Uso de `frozenset` quando um conjunto precisar ser imutável (ex: chave de dict).
+
+---
+
 ## 📚 Referências Rápidas
 - Tipos built-in: `bool`, `int`, `float`, `complex`, `str`, `bytes`, `bytearray`, `memoryview`, `range`
 - Coleções: `list`, `tuple`, `dict`, `set`, `frozenset`

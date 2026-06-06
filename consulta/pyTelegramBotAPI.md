@@ -394,3 +394,14 @@ login_button = types.InlineKeyboardButton('Login', login_url='https://example.co
 Este guia agora aborda de forma ampla o `pyTelegramBotAPI`, incluindo instalação, bot síncrono e assíncrono, teclados, handlers, webhooks, fluxo de conversa, envio de mídia, tratamento de erros e melhores práticas.
 
 > Com estes tópicos, a documentação aproxima-se de uma referência abrangente para bots Telegram em Python.
+
+---
+
+## ✅ Checklist de pyTelegramBotAPI
+- [ ] O Token da API está sendo carregado de variáveis de ambiente?
+- [ ] Usou `AsyncTeleBot` para bots que exigem alta concorrência?
+- [ ] Configurou `infinity_polling` com `non_stop=True` para resiliência?
+- [ ] Implementou `next_step_handler` ou uma máquina de estados para fluxos complexos?
+- [ ] Respondeu a todos os `callback_query` com `answer_callback_query`?
+- [ ] Configurou Webhooks com HTTPS em ambientes de produção?
+- [ ] Adicionou tratamento de exceções ao redor de chamadas da API do Telegram?

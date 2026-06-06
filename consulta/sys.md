@@ -219,6 +219,60 @@ print(sys.audit)
 
 ---
 
+## 🚀 Uso Avançado e Produção
+
+### Monitoramento de Recursão e Limites
+Em sistemas de produção que utilizam algoritmos recursivos profundos (como processadores de árvores ou grafos), monitore e ajuste o limite de recursão preventivamente.
+
+```python
+import sys
+# Aumentar para processamento de estruturas profundas
+sys.setrecursionlimit(5000)
+```
+
+### Hooks de Exceção Global
+Capture exceções não tratadas para logging centralizado antes do encerramento do script.
+
+```python
+import sys
+import logging
+
+def handle_exception(exc_type, exc_value, exc_traceback):
+    if issubclass(exc_type, KeyboardInterrupt):
+        sys.__excepthook__(exc_type, exc_value, exc_traceback)
+        return
+    logging.error("Exceção não tratada", exc_info=(exc_type, exc_value, exc_traceback))
+
+sys.excepthook = handle_exception
+```
+
+### Otimização de Memória com `sys.getsizeof`
+Use para auditar o consumo de memória de grandes estruturas de dados em tempo de execução.
+
+```python
+# Verificando impacto de mudar list para generator
+import sys
+lista = [i for i in range(10000)]
+gen = (i for i in range(10000))
+print(f"Lista: {sys.getsizeof(lista)} bytes")
+print(f"Gerador: {sys.getsizeof(gen)} bytes")
+```
+
+---
+
+## ✅ Checklist de Módulo `sys`
+
+- [ ] Uso de `sys.argv` para capturar argumentos simples (ou `argparse` para complexos).
+- [ ] Encerramento correto do script com `sys.exit(code)`.
+- [ ] Verificação da versão mínima do Python via `sys.version_info`.
+- [ ] Auditoria de caminhos de importação em `sys.path`.
+- [ ] Redirecionamento de `stdout`/`stderr` se necessário para captura de logs.
+- [ ] Uso de `sys.getsizeof()` para análise básica de pegada de memória.
+- [ ] Configuração de `sys.excepthook` para telemetria de erros globais.
+- [ ] Verificação de flags de runtime com `sys.flags`.
+
+---
+
 ## 📝 Resumo
 - `sys.argv`: argumentos do script.
 - `sys.exit()`: encerra o processo.

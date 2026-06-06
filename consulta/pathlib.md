@@ -239,3 +239,13 @@ path_from_os = Path(os.path.join("src", "app", "main.py"))
 - Use `Path.match()` para filtros rápidos, mas prefira `glob()` ou `rglob()` para listagens completas.
 - Se precisar apenas manipular strings de caminhos sem E/S, use `PurePosixPath` ou `PureWindowsPath`.
 - Nenhum método de `Path` é thread-safe por si só; proteja acesso concorrente quando necessário.
+
+---
+
+## ✅ Checklist de pathlib
+- [ ] Substituiu concatenações de strings pelo operador `/`?
+- [ ] Usou `.resolve()` para obter caminhos absolutos e tratar links simbólicos?
+- [ ] Garantiu a criação de diretórios com `mkdir(parents=True, exist_ok=True)`?
+- [ ] Validou a existência do arquivo antes de operações destrutivas (`unlink`)?
+- [ ] Utilizou `read_text`/`write_text` para manipulações simples de arquivos?
+- [ ] Preferiu `Path.home()` e `Path.cwd()` em vez de funções do módulo `os`?

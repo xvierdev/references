@@ -509,3 +509,14 @@ async def recurso_assincrono():
 Este guia cobre os principais conceitos do `pytest` para testes unitários, TDD, fixtures reutilizáveis, mocking, integração com banco de dados e configuração de projeto.
 
 > Com uma configuração adequada e exemplos de TDD, este documento é muito perto de uma referência bíblica de `pytest` para o desenvolvimento Python.
+
+---
+
+## ✅ Checklist de pytest
+- [ ] Os arquivos, classes e funções de teste seguem o padrão de nomenclatura?
+- [ ] Usou `conftest.py` para organizar fixtures compartilhadas?
+- [ ] Aplicou `@pytest.mark.parametrize` para testar múltiplos cenários?
+- [ ] Garantiu que as fixtures possuem o escopo (`scope`) adequado?
+- [ ] Usou `pytest.raises` para validar o lançamento de exceções esperadas?
+- [ ] Mockou dependências externas (APIs, DBs) para testes unitários rápidos?
+- [ ] Configurou o `pytest.ini` ou `pyproject.toml` com as opções padrão do projeto?

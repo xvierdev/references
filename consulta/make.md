@@ -12,6 +12,7 @@ O `make` é uma ferramenta de automação de compilação e tarefas que utiliza 
 5. [🚀 Exemplo Prático para Python](#-exemplo-prático-para-python)
 6. [🐳 Deploy Docker](#-deploy-docker)
 7. [💡 Dicas e Boas Práticas](#-dicas-e-boas-práticas)
+8. [✅ Checklist](#-checklist-de-makefile)
 
 ---
 
@@ -217,6 +218,18 @@ CMD ["streamlit", "run", "main.py", "--server.port=8501", "--server.address=0.0.
     	@echo "Enviando para produção..."
     ```
 4.  **Uso no Windows**: Para usar Makefile no Windows, você pode instalar o `make` via **Chocolatey** (`choco install make`) ou usar o ambiente **Git Bash**.
+
+---
+
+## ✅ Checklist de Makefile
+- [ ] Todos os comandos estão precedidos por um **TAB** (não espaços)?
+- [ ] O alvo `.PHONY` foi definido para todos os alvos que não representam arquivos?
+- [ ] Variáveis foram usadas para comandos e caminhos repetitivos?
+- [ ] Existe um alvo `help` para documentar as tarefas disponíveis?
+- [ ] Usou `@` para silenciar a impressão de comandos puramente informativos?
+- [ ] As dependências entre alvos foram configuradas corretamente?
+- [ ] Limpeza de arquivos temporários (`clean`) foi implementada?
+- [ ] O Makefile foi testado em um ambiente limpo?
 
 ---
 
