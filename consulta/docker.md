@@ -207,7 +207,6 @@ docker compose config             # Valida o arquivo YAML
 
 ### Exemplo `docker-compose.yml` Robusto
 ```yaml
-version: "3.9"
 
 services:
   app:
